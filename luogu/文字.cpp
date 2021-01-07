@@ -6,11 +6,11 @@ int main(void)
     scanf("%d",&n);
 	char s[101];
 	scanf("%s",s);
-	getchar();
+	//getchar();
 	int i=0;
 	while(i<n)
 	{ 
-	  printf("%d\n",i);
+	  //printf("%d\n",i);
 	  int m=0;
 	  scanf("%d\n",&m);
 	  if (m==1)
@@ -86,7 +86,6 @@ int main(void)
 		}
 	}
 	 i++; }
-	 
 	}
 	return 0;
 	
