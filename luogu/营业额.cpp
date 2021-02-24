@@ -11,6 +11,7 @@ int main()
     s.insert(192608170);
     s.insert(-192608170);
     scanf("%d",&n);
+    
     for(register int i=1;i<=n;++i)
     {
         scanf("%d",&x);
@@ -31,6 +32,7 @@ int main()
             }
         }
     }
+    
     printf("%d\n",ans);
     return 0;
 }
