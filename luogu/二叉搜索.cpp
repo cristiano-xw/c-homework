@@ -60,19 +60,19 @@ void insert(int x,int &root)
 int main()
 {
 	cin>>n;
-	//int num=0;
+	int num=0;
 	t[root=++cnt]=node(0,0,1,2147483647);
 	
 	while(n--)
 	{
 		cin>>opt>>x;
-		//num++;
+		num++;
 		if(opt==1) cout<<rank(x,root)<<endl;
 	    if(opt==2) cout<<th(x,root)<<endl;
 	    if(opt==3) cout<<th(rank(x,root)-1,root)<<endl;
 	    if(opt==4) cout<<th(rank(x,root)+1,root)<<endl;
-		if(opt==5) insert(x,root);
+		if(opt==5) num--,insert(x,root);
 	}
-	return 0;
+	return 0;                                     
 }
 

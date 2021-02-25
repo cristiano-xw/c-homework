@@ -12,6 +12,7 @@ void houxu(int x,int y,int p,int q)
     cout<<a[x];
      }   
 }
+
 int main()
 {
     cin>>b>>a;//反一下输入
