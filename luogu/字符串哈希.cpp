@@ -3,9 +3,9 @@
 #define mod 23333
 using namespace std;
 vector<string>linker[mod+2];
-string s;int ans=0; 
+string s;int ans=0;    
 inline void insert()
-{
+{   
 	int hash=1;
     int l=s.length();
     for(int i=0;i<l;i++)
@@ -19,6 +19,7 @@ inline void insert()
 		if(linker[hash][i]==t)
 		return ;
 	}
+	
 	linker[hash].push_back(t);
 	ans++;
 }
@@ -35,4 +36,4 @@ int main()
 	}
 	cout<<ans;
 	return 0;
-}
+}     
