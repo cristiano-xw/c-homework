@@ -7,7 +7,7 @@ struct node
 }p[111111];
 
 int n,m,fa[111111],Enemy[111111];
-//fa[i]是i的父亲(并查集),Enemy[i]是i的敌人(不能在同一组) 
+
 int find(int k)//并查集找父亲 
 {
     if(fa[k]==k)return k;
@@ -41,7 +41,7 @@ int main()
     
     for(int i=1;i<=m;i++)
     {
-    	    int t1=find(p[i].x),t2=find(p[i].y);
+    	    int t1=find(p[i].x); int t2=find(p[i].y);
     	    if(t1==t2) //出现矛盾:直接结束 
     	       {
 		   		printf("%d",p[i].w);

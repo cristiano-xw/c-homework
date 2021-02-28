@@ -15,7 +15,7 @@ bool cmp(node x,node y)
 int find(int x)
 {
 	if(fa[x]==x) return x;
-    return fa[x]=find(fa[x]); //¼ÌĞøÑ°ÕÒ 
+    return find(fa[x]); //¼ÌĞøÑ°ÕÒ 
 }
 
 void join(int x,int y)
