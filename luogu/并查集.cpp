@@ -7,7 +7,7 @@ inline int find(int x)
 {
 	if(x==fa[x])
 	return x;
-	else return fa[x]=find(fa[x]);
+	else return fa[x]=find(fa[x]);//Â·¾¶Ñ¹Ëõ 
 }
 
 /*inline void join(int x,int y)
