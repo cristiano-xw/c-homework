@@ -36,6 +36,7 @@ inline void check()
         if(tree[now][k]==0)           
 		{
 			flag=0;
+			cout<<" "<<endl;
 			break;
 		}
         now=tree[now][k];        

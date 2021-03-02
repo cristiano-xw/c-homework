@@ -2,10 +2,10 @@
 using namespace std;
 
 int n=0; int m=0;
-char s[1111];
+char s[1001];
 int cnt=0;
-int tree[300008][30];
-bitset<1001> vis[520202];
+int tree[300008][26];
+bitset<1001> vis[500007];
 
 
 inline void insert(char *s,int x)
@@ -30,7 +30,8 @@ inline void check(char *s)
 	{
         int k=s[i]-'a';
         if(!tree[now][k])
-		{
+		{  
+		    cout<<" "<<endl;
             flag=0;
             break;
         }

@@ -3,7 +3,7 @@ using namespace std;
 char s[11111]; int tree[555555][30]; 
 int n=0;   int j=0;int m=0;
 int v=0;//表示节点 
-int vis[555555][111];
+bool vis[555555][111];
 inline int read()
 {
 	int k=0; int f=1;

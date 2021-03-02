@@ -32,8 +32,10 @@ inline void insert(int x)
 	{                  
         int p=s[i]-'a';
         if(!tree [now][p])         
-			tree [now][p]=++v;    
-			                        
+		{
+		tree [now][p]=++v;   //给一个新的编号 
+	    }
+	    
         now=tree [now][p];          
     }
     vis[now][x]=1;                 
