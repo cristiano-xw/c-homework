@@ -24,11 +24,12 @@ int main()
 	int n=0; int m=0;
 	cin>>n>>m;
 	int i=0; int j=0;
+	
 	for(i=1;i<=m;i++)
 	{
 		int x=0; int y=0;
 		cin>>x>>y;
-	    p[x].push_back(y);
+	    p[x].push_back(y);      
 	}
 	
 	vis[1]=1;

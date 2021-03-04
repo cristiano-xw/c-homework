@@ -14,6 +14,7 @@ bool cmp(edge x,edge y){  //排序规则
 	return x.u<y.u;
 	else return x.v<y.v;
 }
+
 void dfs(int x){  //深度优先遍历
 	vis1[x]=1;
 	cout<<x<<" ";
@@ -44,12 +45,14 @@ void bfs(int x){  //广度优先遍历
 }
 int main(){
 	int n,m;  //输入，存边
-	cin>>n>>m; 
+	cin>>n>>m;
+	 
 	for(int i=0;i<m;i++){
 		int uu,vv;
 		cin>>uu>>vv;
 		s.push_back((edge){uu,vv});   
 	}
+	
 	sort(s.begin(),s.end(),cmp);  //排序
 	for(int i=0;i<m;i++)   
 		e[s[i].u].push_back(i); 

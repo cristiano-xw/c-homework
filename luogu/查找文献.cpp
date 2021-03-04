@@ -18,6 +18,8 @@ void solve(int x)
 	}
 }
 
+
+
 int main()
 {
 	cin>>n>>m;
