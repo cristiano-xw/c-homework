@@ -8,7 +8,7 @@ int main()
                  
     cin>>n>>m;
    for(int i=1;i<=m;i++){
-        dis[i]=w[i]=-100000000;
+        dis[i]=w[i]=-1111111111;
         f[i][1]=f[i][2]=0;
     }
     

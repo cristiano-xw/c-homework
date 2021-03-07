@@ -34,9 +34,10 @@ int main()
     	{
     		cin>>y;
     		if(y==0) break;
-    		if(y!=0) linker[y].push_back(x);
+    		if(y!=0) linker[y].push_back(x);//建立父节点 
 		}
 	}
+	
 	int ans=0;
 	for(int i=1;i<=n;i++)
 	{
