@@ -1,15 +1,14 @@
 #include<bits/stdc++.h>
 #include<map>
 using namespace std;
-string a[1005];//记录单词
-string now[1005];//记录结果
-string ans[1005];
+string a[100055];//记录单词
+string now[100055];//记录结果
+string ans[100055];
 int sum=0; int n=0;
-int len[1005]; int vis[1005];
+int len[100055]; int vis[100055]; 
 int flag=0;
 map<char,int>s1,s2;
-int start=0;
-
+            
 void dfs(int last,int step)
 {
 	if(flag==1)
@@ -53,6 +52,7 @@ int main()
 	
 	char begin,end;//寻找第一个和最后一个出现的单词
 	sort(a+1,a+n+1);//排序 
+	int start=1;
 	for(char c='a';c<='z';c++)
 	{
 		if(abs(s1[c]-s2[c])==1)//找到 
@@ -67,7 +67,7 @@ int main()
 			}
 		}
 	}
-	
+   
 	int time=s2[end];
 	for(int i=1;i<=n;i++)
 	{
@@ -88,14 +88,12 @@ int main()
 		return 0;
 	}
 	
-	for(int i=1;i<=n;i++)
+	for(int i=1;i<n;i++)
 	{
 		if(i!=n)
 		cout<<ans[i]<<".";
-		else
-		cout<<ans[i];
 	}
-	
+	cout<<ans[n];
 	return 0;	
 } 
 

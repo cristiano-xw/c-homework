@@ -63,10 +63,10 @@ int main()
 		}
 	}
 	
-	int cnt=s2[end];
+	int time=s2[end];
 	for(int i=1;i<=n;i++)
 	{
-		if(a[i][0]==begin && (a[i][len[i]-1]!=end || cnt!=1))
+		if(a[i][0]==begin && (a[i][len[i]-1]!=end || time>1))
 		{
 			start=i;
 			break;
@@ -87,6 +87,7 @@ int main()
 		if(i!=n)
 		cout<<ans[i]<<".";
 	}
+	
 	cout<<ans[n];
 	return 0;
 }

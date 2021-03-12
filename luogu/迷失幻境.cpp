@@ -15,7 +15,8 @@ char ch;
 
 void dfs(int x, int y, int lx, int ly) {
 	if(fl) return;
-	if(vis[x][y][0] && vis[x][y][1]!=lx && vis[x][y][2]!=ly) {
+	if(vis[x][y][0] && (vis[x][y][1]!=lx || vis[x][y][2]!=ly))
+    {  
 		fl = 1;
 		return;
 	}

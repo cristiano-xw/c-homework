@@ -4,7 +4,7 @@ using namespace std;
 const int maxn=1e5+5;
 string a[maxn];  
 string ans[maxn];
-string now[maxn];
+string ans[maxn];
 int sum=0;
 int len[maxn];
 int vis[maxn];
@@ -26,7 +26,7 @@ void dfs(int last,int step)
 		continue;
 		if(a[last][a[last].length()-1]==a[i][0])
 		{
-			now[++sum]=a[i];
+			ans[++sum]=a[i];
 			vis[i]=1;
 			dfs(i,step+1);
 			sum--;
@@ -73,7 +73,7 @@ int main()
 	}
 	
 	vis[start]=1;
-	now[++sum]=a[start];
+	ans[++sum]=a[start];
 	dfs(start,1);
 	
 	if(flag==0)
@@ -85,9 +85,9 @@ int main()
 	for(int i=1;i<=n;i++)
 	{
 		if(i!=n)
-		cout<<now[i]<<".";
+		cout<<ans[i]<<".";
 		else
-		cout<<now[i];
+		cout<<ans[i];
 	}
 	printf("\n");
 	return 0;
