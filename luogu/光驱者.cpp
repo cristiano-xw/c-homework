@@ -18,14 +18,14 @@ int main()
 		sum[i]=sum[i-1]+x;
 	}
 	
-	long long cnt=sum[k];
+	long long cnt=sum[k];//从第一个点出发 
 	{
 		for(int i=2;i<=n-k;i++)
 		{
 			cnt=max(cnt,sum[i-1+k]-sum[i-1]);
 		}
-	}
-	
+	} 
+ 	 
 	cout<<sum[n-1]-cnt;
 	return 0;
-}
+}   

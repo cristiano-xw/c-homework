@@ -2,7 +2,7 @@
 int b[125][125];
 int main() 
 { 
-	int n,ans=-1828805;//经过计算，最小不会小过这个值 
+	int n,ans=-1828805; 
 	scanf("%d",&n);
 	for(register int i=1;i<=n;++i) {
 		for(register int j=1;j<=n;++j) {
@@ -21,7 +21,7 @@ int main()
 			{   
 				int tmp=b[i][k]-b[j][k]; //取前缀和 
 				if(sum<0)	sum=0;
-                sum+=tmp;
+                sum+=tmp;       
 				if(sum>ans)	
 				ans=sum; 
 			}
