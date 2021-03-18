@@ -2,24 +2,18 @@
 #include<vector>
 #include<cstring>
 #define N 505
-#define For(i,j,k) for(int i=j;i<=k;i++)
+
 using namespace std;
-int read(){//快读
-    int l=1,x=0; char ch=getchar();
-    while((ch<'0'||ch>'9')&&ch!='-') ch=getchar();
-    if (ch=='-') ch=getchar(),l=-1;
-    while(ch>='0'&&ch<='9') x=(x<<1)+(x<<3)+(ch^48),ch=getchar();
-    return x*l;
-}
+
 
 struct node{int dis,nex;}f;
 vector<node> mp[N]; //vector存图，下标是边的起始点，dis边权，nex是边的终点(蒟蒻不会链式前向星5555)
 int sum[N],fl[N]={0},flag;
 
 void spfa(int k) 
-{ //dfs的spfa
+{  
     if (fl[k]==1) {fl[k]=0; flag=1; return;} //只要一个点第二次走到就说明有负环了，标记退出
-    fl[k]=1; //标记这个点走过了
+    fl[k]=1;  
     if (!mp[k].empty())
     {
         For(i,0,mp[k].size()-1)
