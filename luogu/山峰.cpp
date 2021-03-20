@@ -23,7 +23,8 @@ void bfs(int sx,int sy)
     while(!q.empty())
 	{
         Node fg=q.front();
-        for(int i=0;i<8;i++){
+        for(int i=0;i<8;i++)
+		{
             int tx=fg.x+dx[i];
             int ty=fg.y+dy[i];
             if(tx>=1&&tx<=n&&ty>=1&&ty<=n&&!v[tx][ty]&&mapp[tx][ty]==col)

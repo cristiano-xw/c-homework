@@ -29,7 +29,7 @@ void bfs(int sx,int sy)
 	{
 		int x=q.front().x; int y=q.front().y;
 		q.pop();
-		for(int i=0; i<=8;i++)
+		for(int i=1; i<=8;i++)//遍历八个方向 
 		{
 			int xx=x+dx[i]; int yy=y+dy[i];
 			if(xx>=1&&xx<=n&&yy>=1&&yy<=n&&mapp[xx][yy]==col&&vis[xx][yy]==0)

@@ -28,11 +28,11 @@ void bfs(int x, int y) {
         for (int i = 0; i <= 7; i++) {//八方向
             int nx = temp.x + dx[i];
             int ny = temp.y + dy[i];
-           
-            if (nx>=1&&nx<=n&&ny>=1&&ny<=n&&map[nx][ny] == map[temp.x][temp.y] && !vis[nx][ny]) {	// 高度相等打上标记接着搜
+            if (nx < 1 || nx > n || ny < 1 || ny > n) continue;	//越界
+            if (map[nx][ny] == map[temp.x][temp.y] && !vis[nx][ny]) {	// 高度相等打上标记接着搜
                 vis[nx][ny] = 1;
                 q.push((Node){nx, ny});
-            }
+            } 
             else {	// 山峰山谷是否成立
                 if (map[nx][ny] > map[temp.x][temp.y]) sf = 0;
                 if (map[nx][ny] < map[temp.x][temp.y]) sg = 0;
