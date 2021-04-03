@@ -9,7 +9,7 @@ void queen(int i)
     if(i>n)
     {
         print();  
-		printf("%d\n",i); 
+		printf("%d空间上的距离开发\n",i); 
     }  
     else
     {

@@ -14,8 +14,10 @@ int main()
         scanf("%d",&num[i]);  
         num[i+n]=num[i];  //扩容 
     }
+    
     for(int i=1;i<=2*n;i++)
-	 s[i]=s[i-1]+num[i];  //求出前缀和 
+	s[i]=s[i-1]+num[i];  //求出前缀和 
+	
     for(int p=1;p<n;p++)  
     {  
         for(int i=1,j=i+p;(j<n+n) && (i<n+n);i++,j=i+p)  

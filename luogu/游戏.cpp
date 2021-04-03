@@ -12,7 +12,7 @@ int main()
 		cin>>dp[i][i];//初始化 
 	}
 	
-	for(int k=1;k<n;k++)//依然是间隔
+	for(int k=1;k<n;k++)//依然是间隔 
 	{
 		for(int i=1,j=i+k;i<n&&j<=n;i++,j++)
 		{
@@ -24,7 +24,7 @@ int main()
 					ans=max(ans,dp[i][j]);
 				}
 			}
-		}
+		} 
 	} 
 	cout<<ans;
 	return 0;

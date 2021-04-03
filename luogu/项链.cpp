@@ -16,7 +16,7 @@ int main()
 	{
 		for(int i=1,j=i+k;i<=2*n&&j<=2*n;i++,j++)
 		{
-			for(int p=i+1;p<=j-1;p++)
+			for(int p=i+1;p<=j-1;p++) //界于之间  
 			{
 				dp[i][j]=max(dp[i][j],dp[i][p]+dp[p][j]+a[i]*a[j]*a[p]);
 			}

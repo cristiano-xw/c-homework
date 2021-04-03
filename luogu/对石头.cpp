@@ -31,7 +31,7 @@ int main()
 	 	for(int i=1,j=i+k;i<2*n,j<=2*n;i++,j++)
 	 	{
 	 		dp1[i][j]=INF;
-	 		for(int m=i+1;m<j;m++)
+	 		for(int m=i;m<j;m++)
 	 		{
 	 			dp1[i][j]=min(dp1[i][j],dp1[i][m]+dp1[m+1][j]+cha(i,j));
 	 			dp2[i][j]=max(dp2[i][j],dp2[i][m]+dp2[m+1][j]+cha(i,j));

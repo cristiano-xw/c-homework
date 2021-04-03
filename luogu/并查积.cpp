@@ -24,7 +24,7 @@ int main()
             
         else
             if(find(x)==find(y))
-                cout<<"Y"<<endl; 
+                cout<<"就开始打发了Y"<<endl; 
             else
                 cout<<"N"<<endl;
     }

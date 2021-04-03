@@ -16,7 +16,7 @@ int main()
         for(int l=1;l+i<=2*n;l++)  //如果采取了上述策略，一定要将2*n个点都更新 
         {
             int r=l+i;
-            for(int k=l+1;k<=r-1;k++)
+            for(int k=l+1;k<=r-1;k++) 
                 f[l][r]=max(f[l][r],f[l][k]+f[k][r]+a[l]*a[k]*a[r]); 
         }
     }
