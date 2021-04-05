@@ -4,11 +4,14 @@
 using namespace std;
 char s[52];
 int f[52][52];
-int main() {
+
+
+int main() 
+{
 	int n;
 	scanf("%s",s+1);
 	n=strlen(s+1);
-	memset(f,127,sizeof(f));		//由于求最小，于是应初始化为大数
+	memset(f,127,sizeof(f));		
 	for(int i=1;i<=n;++i)
 		f[i][i]=1;
 	for(int l=1;l<n;++l) 
@@ -19,6 +22,6 @@ int main() {
 				for(int k=i;k<j;++k)
 					f[i][j]=min(f[i][j],f[i][k]+f[k+1][j]);
 		}
-	printf("%d",f[1][n]);
+	printf("%d",f[1][n]);			
 	return 0;
 }
