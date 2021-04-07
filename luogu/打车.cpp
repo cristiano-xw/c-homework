@@ -35,8 +35,6 @@ int main()
 	cout<<"大车b，小车s,e结束"<<endl;
 	shoufei s;
 	char t;
-	
-	
 	while(cin>>t)
 	{  
 		s.add(t);

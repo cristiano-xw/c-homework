@@ -13,7 +13,7 @@ class s
 		{
 			printf("第%d次结果",i);
 		 
-			int x=rand() % 6 + 2;
+			int x=rand() % 6 + 1;
 			cout<<x<<endl;
 		}
 		
