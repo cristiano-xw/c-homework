@@ -9,17 +9,17 @@ void add(long long x,long long k)//第x个数加上k
 	for(;x<=n;x+=x&-x)
 	{
 		t[x]+=k;
-	}
+	}  
 }
 
-int ask(long long x)//第x个数 
+long long ask(long long x)//第x个数 
 {
 	long long ans=0;
-	for(;x<=n;x-=x&x)
+	for(;x;x-=x&x)   
 	{
 		ans+=t[x];
-	}
-	return x;
+	}   
+	return ans;
 }
 
 int main()
@@ -47,11 +47,12 @@ int main()
             add(x, k);
             add(y + 1, -k);
         }  
+        
 		if (flg == 2)
 		{
-            int x;
+            long long x;
            	cin>>x;
-            cout<<t[x]<<endl;
+            cout<<ask(x)<<endl; 
         }
     }
     return 0;
