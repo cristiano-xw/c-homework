@@ -40,7 +40,7 @@ int main()
 		}
 	} 
 	
-	for(int i=1;i<=n;i++)
+	for(int i=1;i<=m;i++)
 	{
 		int flag=0;
 		cin>>flag;
